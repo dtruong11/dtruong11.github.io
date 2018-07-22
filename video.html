@@ -1,0 +1,42 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Doctor Profile</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./style/main.css">
+</head>
+
+<body>
+    <div class="topnav">
+        <a class="float-left" href="#home">GEMS</a>
+        <form class="float-left form-inline my-5 my-lg-0">
+            <input class="form-control ml-5 mr-sm-2 mt-2" type="search" placeholder="Search" aria-label="Search">
+        </form>
+        <a class="active float-right mr-2" href="#home">Events</a>
+        <a class="float-right mr-2" href="#news">Device Sharing</a>
+        <a class="float-right mr-2" href="#contact">Resource</a>
+        <a class="float-right mr-2" href="#about">About</a>
+    </div>
+    <div id="video" style="margin:0 auto;">
+        <div id="agora_local" style="float:right;width:210px;height:147px;display:inline-block;"></div>
+    </div>
+    <div id="div_device" class="panel panel-default">
+        <div class="select">
+            <label for="audioSource">Audio source: </label>
+            <select id="audioSource"></select>
+        </div>
+        <div class="select">
+            <label for="videoSource">Video source: </label>
+            <select id="videoSource"></select>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/bundle.js"></script>
+</body>
+</html>

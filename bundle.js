@@ -22,6 +22,7 @@ const declineBtns = Array.from(allDeclineButtons)
 acceptBtns.map(el => {
   el.addEventListener('click', join)
 })
+
 // add event listeners to decline buttons
 declineBtns.map(el => {
   el.addEventListener('click', function() {
@@ -39,8 +40,7 @@ var videoSelect = document.querySelector('#videoSource');
 let client, localStream, camera, microphone;
 
 function join() {
-	renderVideo()
-	const channel_key = null;
+  const channel_key = null;
   console.log("Init AgoraRTC client with App ID: " + appId);
 
   client = AgoraRTC.createClient({
@@ -358,7 +358,7 @@ function renderHome () {
 module.exports = renderHome;
 },{}],5:[function(require,module,exports){
 function renderVideo () {
-    const videoTemplate = `
+    let videoTemplate = `
     <!-- nav bar -->
     <div class="topnav">
     <a class="float-left" href="#home">GEMS</a>

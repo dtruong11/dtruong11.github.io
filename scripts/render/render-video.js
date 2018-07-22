@@ -1,5 +1,5 @@
 function renderVideo () {
-    const videoTemplate = `
+    let videoTemplate = `
     <!-- nav bar -->
     <div class="topnav">
     <a class="float-left" href="#home">GEMS</a>
