@@ -1,0 +1,24 @@
+{
+  "name": "dtruong11.github.io",
+  "version": "1.0.0",
+  "description": "This site is a group efforts of the five musketeers,Diep, Ziwei, William and Sarah. We made a web application to solve the issue of medical support in local, distant area or disaster zone. This application allow doctors across the world to do video call without little to none delay by integrating in agora.io. Doctors can share their instructions and knowledge to on-ground volunteer doctors who need assistance in helping patients disaster zone or in life-threatening conditions. This application also supports non-life-threatening cases.",
+  "main": "bundle.js",
+  "dependencies": {
+    "agora-rtc-sdk": "^2.3.1",
+    "http-server": "^0.11.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dtruong11/dtruong11.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dtruong11/dtruong11.github.io/issues"
+  },
+  "homepage": "https://github.com/dtruong11/dtruong11.github.io#readme"
+}
