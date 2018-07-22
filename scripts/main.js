@@ -26,6 +26,9 @@ if (!AgoraRTC.checkSystemRequirements()) {
   alert("Your browser does not support WebRTC!");
 }
 
+var audioSelect = document.querySelector('select#audioSource');
+var videoSelect = document.querySelector('select#videoSource');
+
 let client, localStream, camera, microphone;
 
 function join() {
