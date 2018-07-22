@@ -109,7 +109,7 @@
             client = AgoraRTC.createClient({
                 mode: 'interop'
             });
-            client.init(key.value, function () {
+            client.init('6942341968f245beb966b3f5db73e350', function () {
                 console.log("AgoraRTC client initialized");
                 client.join(channel_key, channel.value, null, function (uid) {
                     console.log("User " + uid + " join channel successfully");
