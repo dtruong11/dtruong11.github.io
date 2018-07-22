@@ -40,7 +40,6 @@
 
     <div id="div_join" class="panel panel-default">
         <div class="panel-body">
-            App ID:
             Channel:
             <input id="channel" type="text" value="test" size="4"></input>
             <!--Host: <input id="video" type="checkbox" checked></input>-->
@@ -93,6 +92,7 @@
         AgoraRTC.Logger.info('this is info');
         AgoraRTC.Logger.debug('this is debug');
         let appId = '6942341968f245beb966b3f5db73e350'
+        let channel = '1000'
 
         var client, localStream, camera, microphone;
 
@@ -108,7 +108,7 @@
             client = AgoraRTC.createClient({
                 mode: 'interop'
             });
-            client.init(appId.value, function () {
+            client.init('6942341968f245beb966b3f5db73e350', function () {
                 console.log("AgoraRTC client initialized");
                 client.join(channel_key, channel.value, null, function (uid) {
                     console.log("User " + uid + " join channel successfully");
