@@ -1,6 +1,5 @@
 // const renderHome = require('./render/render-home')
 // const renderVideo = require('./render/render-video')
-const AgoraRTC = require('agora-rtc-sdk')
 
 // renderHome()
 
