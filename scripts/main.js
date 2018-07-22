@@ -5,7 +5,6 @@ const AgoraRTC = require('agora-rtc-sdk')
 
 const allAcceptButtons = document.querySelectorAll('.buttons-acc')
 const allDeclineButtons = document.querySelectorAll('.buttons-decline')
-const appId = require('./appID')
 
 const acceptBtns = Array.from(allAcceptButtons)
 const declineBtns = Array.from(allDeclineButtons)
