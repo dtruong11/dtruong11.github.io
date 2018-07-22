@@ -1,0 +1,25 @@
+{
+  "name": "angel-hack-frontend",
+  "version": "1.0.0",
+  "description": "this project tackles the issue of medical support in distant area using agora.io",
+  "main": "./scripts/main.js",
+  "scripts": {
+    "dev-server": "live-server .",
+    "build": "browserify scripts/main.js -o bundle.js",
+    "watch": "watchify scripts/main.js -o bundle.js",
+    "dev": "run-all \"npm run watch\" \"npm run dev-server\"",
+    "start": "http-server ."
+  },
+  "devDependencies": {
+    "browserify": "^16.2.2",
+    "http-server": "^0.11.1",
+    "live-server": "^1.2.0",
+    "run-all": "^1.0.1",
+    "watchify": "^3.11.0"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "agora-rtc-sdk": "^2.3.1"
+  }
+}

@@ -1,0 +1,87 @@
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #507BFC;
+    overflow: hidden;
+}
+
+
+/* Style the links inside the navigation bar */
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+
+.topnav a:hover {
+    background-color: #507BFC;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+
+.topnav a:hover {
+    color: lightcyan;
+}
+
+/*Emergency Event Hover Information Flip*/
+
+.col div:hover {
+    color: #808080;
+    background-color: #808080;
+}
+
+.call-request {
+    border: 0.5px solid gray;
+    border-radius: 10px;
+    margin: 25px;
+}
+
+.avatar {
+    width: 100%;
+    border-radius: 60px;
+}
+
+.accept {
+    margin-left: 100px;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+section aside {
+    flex: 1;
+}
+
+section article {
+    flex: 4;
+    margin-left: 10px;
+}
+
+.events-pic {
+    height: 25vh;
+}
+
+/* Buttons */
+.buttons-acc, .buttons-decline{
+    width: 50%;
+    height: 90%
+}
+
+
+.container.request {
+    border-radius:20px;
+}
+
+.events-text {
+    size: 10px;
+}
