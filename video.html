@@ -91,8 +91,6 @@
         AgoraRTC.Logger.warning('this is warning');
         AgoraRTC.Logger.info('this is info');
         AgoraRTC.Logger.debug('this is debug');
-        let appId = '6942341968f245beb966b3f5db73e350'
-        let channel = 'test'
 
         var client, localStream, camera, microphone;
 
@@ -100,6 +98,10 @@
         var videoSelect = document.querySelector('select#videoSource');
 
         function join() {
+
+        let appId = '6942341968f245beb966b3f5db73e350'
+        let channel = 'test'
+
             document.getElementById("join").disabled = true;
             //document.getElementById("video").disabled = true;
             var channel_key = null;
