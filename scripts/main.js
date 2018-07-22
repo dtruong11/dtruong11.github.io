@@ -2,6 +2,7 @@
 // const renderVideo = require('./render/render-video')
 
 const AgoraRTC = require('agora-rtc-sdk')
+const appId = '6942341968f245beb966b3f5db73e350'
 
 const allAcceptButtons = document.querySelectorAll('.buttons-acc')
 const allDeclineButtons = document.querySelectorAll('.buttons-decline')
