@@ -16,6 +16,12 @@
     font-size: 17px;
 }
 
+/* Style the search bar */
+
+.search-bar {
+	float: left;
+}
+
 /* Change the color of links on hover */
 
 .topnav a:hover {
@@ -72,9 +78,10 @@ section article {
 }
 
 /* Buttons */
-.buttons-acc, .buttons-decline{
-    width: 50%;
-    height: 90%
+
+.buttons-acc, .buttons-decline {
+	width: 90%;
+	height: auto;
 }
 
 
@@ -85,3 +92,4 @@ section article {
 .events-text {
     size: 10px;
 }
+
