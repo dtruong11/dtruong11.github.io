@@ -11,9 +11,9 @@
     float: left;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
+    padding: 15px 15px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 16px;
 }
 
 /* Style the search bar */
@@ -32,7 +32,8 @@
 /* Add a color to the active/current link */
 
 .topnav a:hover {
-    color: lightcyan;
+    color: white;
+    transform: scale(1.1)
 }
 
 /* Change the color of links on hover */
@@ -51,8 +52,8 @@
 /*Emergency Event Hover Information Flip*/
 
 .col div:hover {
-    color: #808080;
-    background-color: #808080;
+    /* color: #808080;
+    background-color: #808080; */
 }
 
 .call-request {
@@ -87,7 +88,11 @@ section article {
 }
 
 .events-pic {
-    height: 25vh;
+    height: 22vh;
+}
+
+.incidents {
+    font-size: 13px
 }
 
 /* Buttons */

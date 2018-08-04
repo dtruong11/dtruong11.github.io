@@ -12,14 +12,20 @@
 <body>
     <!-- nav bar -->
     <div class="topnav">
-        <a class="float-left" href="./index.html">GEMS</a>
-        <form class="search-bar">
-            <input class="form-control ml-5 mr-sm-2 mt-2" type="search" placeholder="Search" aria-label="Search">
-        </form>
-        <a class="active float-right mr-2" href="#events">Events</a>
-        <a class="float-right mr-2" href="#news">Device Sharing</a>
-        <a class="float-right mr-2" href="#contact">Resource</a>
-        <a class="float-right mr-2" href="#about">About</a>
+        <div class='container'>
+            <a class="float-left" href="./index.html">
+                <img src="./assets/doc-landing/logo.png" alt="logo">
+            </a>
+            <!-- <form class="search-bar">
+                <input class="form-control ml-5 mr-sm-2 mt-2" type="search" placeholder="Search" aria-label="Search">
+            </form> -->
+            <a class="float-right mr-2" href="#">
+                <img class='mr-2' src="./assets/doc-landing/doctor-1.png" alt="doctor-avatar"> Richard Cohen
+            </a>
+            <a class="active float-right mr-3" href="#events">Events</a>
+            <a class="float-right mr-3" href="#contact">Resource</a>
+            <a class="float-right mr-3" href="#about">About</a>
+        </div>
     </div>
 
     <div class='container mt-3'>
@@ -31,54 +37,24 @@
     <div class='container request mt-3 border border-light pt-4 text-wrap'>
         <div class='row'>
             <div class='col-1'>
-                <img class="avatar" src="https://placekitten.com/100/100" alt="kitten">
+                <img class="avatar" src="./assets/doc-landing/volunteer-3.png" alt="kitten">
             </div>
             <div class='col-11'>
                 <div class='row'>
                     <div class='col-4 px-0'>
-                        <h5>PAHOA, HAWAII - Volcano Eruption</h5>
-                        <p>Amy Anderson</p>
+                        <h5>PARIS, FRANCE - Flood</h5>
+                        <p>Richard Hendricks</p>
                     </div>
                     <div class='col-5 px-0'>
-                        <p>Patient has cardiovascular disease and asthma, currently has trouble breathing.</p>
+                        <p>Patient has broken legs and loses lots of blood.</p>
                     </div>
                     <div class='col-3'>
                         <div class="d-flex flex-row">
-                            <a href="./video.html">
-                                <img class='buttons-acc' src="./assets/Buttons/Accept.png" alt="accept-button">
-                            </a>
                             <a>
                                 <img class='buttons-decline' src="./assets/Buttons/Decline.png" alt="decline-button">
                             </a>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class='container request mt-3 border border-light pt-4 text-wrap'>
-        <div class='row'>
-            <div class='col-1'>
-                <img class="avatar" src="https://placekitten.com/100/100" alt="kitten">
-            </div>
-            <div class='col-11'>
-                <div class='row'>
-                    <div class='col-4 px-0'>
-                        <h5>PAHOA, HAWAII - Volcano Eruption</h5>
-                        <p>Amy Anderson</p>
-                    </div>
-                    <div class='col-5 px-0'>
-                        <p>Patient has cardiovascular disease and asthma, currently has trouble breathing.</p>
-                    </div>
-                    <div class='col-3'>
-                        <div class="d-flex flex-row">
                             <a href="./video.html">
                                 <img class='buttons-acc' src="./assets/Buttons/Accept.png" alt="accept-button">
-                            </a>
-                            <a>
-                                <img class='buttons-decline' src="./assets/Buttons/Decline.png" alt="decline-button">
                             </a>
                         </div>
                     </div>
@@ -90,7 +66,7 @@
     <div class='container request mt-3 border border-light pt-4 text-wrap'>
         <div class='row'>
             <div class='col-1'>
-                <img class="avatar" src="https://placekitten.com/100/100" alt="kitten">
+                <img class="avatar" src="./assets/doc-landing/volunteer-1.png" alt="kitten">
             </div>
             <div class='col-11'>
                 <div class='row'>
@@ -103,11 +79,40 @@
                     </div>
                     <div class='col-3'>
                         <div class="d-flex flex-row">
+                            <a>
+                                <img class='buttons-decline' src="./assets/Buttons/Decline.png" alt="decline-button">
+                            </a>
                             <a href="./video.html">
                                 <img class='buttons-acc' src="./assets/Buttons/Accept.png" alt="accept-button">
                             </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class='container request mt-3 border border-light pt-4 text-wrap'>
+        <div class='row'>
+            <div class='col-1'>
+                <img class="avatar" src="./assets/doc-landing/volunteer-2.png" alt="kitten">
+            </div>
+            <div class='col-11'>
+                <div class='row'>
+                    <div class='col-4 px-0'>
+                        <h5>KALAPANA, US - Volcano Eruption</h5>
+                        <p>Jenny Lusk</p>
+                    </div>
+                    <div class='col-5 px-0'>
+                        <p>There's too much smoke. Patient has difficulty in breathing.</p>
+                    </div>
+                    <div class='col-3'>
+                        <div class="d-flex flex-row">
                             <a>
                                 <img class='buttons-decline' src="./assets/Buttons/Decline.png" alt="decline-button">
+                            </a>
+                            <a href="./video.html">
+                                <img class='buttons-acc' src="./assets/Buttons/Accept.png" alt="accept-button">
                             </a>
                         </div>
                     </div>
@@ -127,13 +132,18 @@
         <div class="col">
             <div class="card">
                 <img class="card-img-top events-pic" src="./assets/Volcano Photos/00a.jpg" alt="Card image cap">
+                <div class="card-img-overlay">
+                    <h5 class="card-title text-center text-white mt-5">MAUI, HAWAII</h5>
+                    <p class="card-text text-center text-white ">Volcano Eruption</p>
+                </div>
                 <div class="card-body">
                     <div class='d-flex row'>
                         <div class='col border-right'>
-                            <p>115 incidents reported</p>
+                            <p class='incidents text-center'>115 incidents reported</p>
                         </div>
                         <div class='col'>
-                            <p>41 doctors helping</p>
+                            <img src="./assets/doc-landing/doctors.png" alt="doctor-helping">
+                            <span class='incidents text-center'>41 doctors helping</span>
                         </div>
                     </div>
                 </div>
@@ -142,14 +152,19 @@
 
         <div class="col">
             <div class="card">
-                <img class="card-img-top events-pic" src="./assets/Volcano Photos/turila.jpg" alt="volcano photo">
+                <img class="card-img-top events-pic" src="./assets/Volcano Photos/flood.jpg" alt="volcano photo">
+                <div class="card-img-overlay">
+                    <h5 class="card-title text-center text-white text-uppercase mt-5">paris, france</h5>
+                    <p class="card-text text-center text-white ">Flood</p>
+                </div>
                 <div class="card-body">
                     <div class='d-flex row events-text'>
                         <div class='col border-right'>
-                            <p>120 incidents reported</p>
+                            <p class='incidents text-center'>120 incidents reported</p>
                         </div>
                         <div class='col'>
-                            <p>25 doctors helping</p>
+                            <img src="./assets/doc-landing/doctors.png" alt="doctor-helping">
+                            <span class='incidents text-center'>28 doctors helping</span>
                         </div>
                     </div>
                 </div>
@@ -158,21 +173,25 @@
 
         <div class="col">
             <div class="card">
-                <img class="card-img-top events-pic" src="./assets/Volcano Photos/hqdefault.jpg" alt="volcano photo">
+                <img class="card-img-top events-pic" src="./assets/doc-landing/volcano-us.jpg" alt="volcano-photo">
+                <div class="card-img-overlay">
+                    <h5 class="card-title text-center text-white text-uppercase mt-5">Kalapana, United States </h5>
+                    <p class="card-text text-center text-white ">Volcano Eruption</p>
+                </div>
                 <div class="card-body">
                     <div class='d-flex row'>
                         <div class='col border-right'>
-                            <p>545 incidents reported</p>
+                            <p class='incidents text-center'>35 incidents reported</p>
                         </div>
                         <div class='col'>
-                            <p>98 doctors helping</p>
+                            <img src="./assets/doc-landing/doctors.png" alt="doctor-helping">
+                            <span class='incidents text-center'>98 doctors helping</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
