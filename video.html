@@ -28,7 +28,7 @@
         <a class="float-right mr-2" href="#contact">Resource</a>
         <a class="float-right mr-2" href="#about">About</a>
     </div>
-    <div id="div_device" class="panel panel-default">
+    <div id="div_device" class="panel panel-default" style="display:none">
         <div class="select">
             <label for="audioSource">Audio source: </label>
             <select id="audioSource"></select>
@@ -40,21 +40,72 @@
     </div>
     <div id="div_join" class="panel panel-default">
         <div class="panel-body">
-            Channel:
-            <input id="channel" type="text" value="test" size="4"></input>
-            <!--Host: <input id="video" type="checkbox" checked></input>-->
-            <button id="join" class="btn btn-primary" onclick="join()">Join</button>
-            <button id="leave" class="btn btn-primary" onclick="leave()">Leave</button>
-            <button id="muteAudio" class="btn btn-primary" onclick="muteAudio()">Mute</button>
-            <button id="unmuteAudio" class="btn btn-primary" onclick="unmuteAudio()">Unmute</button>
-            <button id="enableVideo" class="btn btn-primary" onclick="enableVideo()">Enable Video</button>
-            <button id="disableVideo" class="btn btn-primary" onclick="disableVideo()">Disable Video</button>
+            <button id="leave" class="btn btn-primary">Leave</button>
+            <button id="muteAudio" class="btn btn-primary">Mute</button>
+            <button id="unmuteAudio" class="btn btn-primary">Unmute</button>
+            <button id="enableVideo" class="btn btn-primary">Enable Video</button>
+            <button id="disableVideo" class="btn btn-primary">Disable Video</button>
         </div>
     </div>
     <div id="video" style="margin:0 auto;">
         <div id="agora_local" class='local-video'></div>
     </div>
-    <script src='./scripts/video.js'></script>
+
+    <!-- Code from RTC London -->
+    <div id="wrapper">
+        <div class="room-name-title" id="room-name-meeting"></div>
+        <div class="main-container vid-container">
+            <div id="video-container-parent">
+                <div id="video-container" class="video-container">
+                    <div id="video-container-multiple"></div>
+                    <div class="toolbar">
+                        <ul>
+                            <li>
+                                <a class="switch-audio-button" href="#">
+                                    <img src="images/btn_voice@2x.png" alt="Voice">
+                                </a>
+                            </li>
+                            <li>
+                                <a class="mute-button" href="#">
+                                    <img src="images/btn_mute@2x.png" alt="Mute">
+                                </a>
+                            </li>
+                            <li style="display: none">
+                                <a class="fullscreen-button" style="display: none" href="#">
+                                    <img style="display: none" src="images/btn_maximize@2x.png" alt="Fullscreen">
+                                </a>
+                            </li>
+                            <li style="display: none">
+                                <a class="expension-button" style="display: none" href="#">
+                                    <img style="display: none" src="images/btn_expansion.png" alt="Switch">
+                                </a>
+                            </li>
+                            <li>
+                                <a class="end-call-button" href="#">
+                                    <img src="images/btn_endcall@2x.png" alt="End">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="video-side-bar">
+                <div class="video-operation-bar">
+                    <span class="video-operation-btn list-switch-audio-btn"></span>
+                    <span class="video-operation-btn list-hang-up-btn"></span>
+                    <span class="video-operation-btn list-close-btn"></span>
+                </div>
+            </div>
+            <div class="info"></div>
+        </div>
+    </div>
+    <!-- The end of RTC London code -->
+
+
+    <!-- Script reference -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src='./bundle.js'></script>
 </body>
 
 </html>

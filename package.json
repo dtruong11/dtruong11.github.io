@@ -4,13 +4,19 @@
   "description": "This site is a group efforts of the five musketeers,Diep, Ziwei, William and Sarah. We made a web application to solve the issue of medical support in local, distant area or disaster zone. This application allow doctors across the world to do video call without little to none delay by integrating in agora.io. Doctors can share their instructions and knowledge to on-ground volunteer doctors who need assistance in helping patients disaster zone or in life-threatening conditions. This application also supports non-life-threatening cases.",
   "main": "bundle.js",
   "dependencies": {
-    "agora-rtc-sdk": "^2.3.1",
-    "http-server": "^0.11.1",
-    "live-server": "^1.2.0"
+    "agora-rtc-sdk": "^2.3.1"
   },
-  "devDependencies": {},
   "scripts": {
-    "start": "live-server"
+    "dev-server": "live-server .",
+    "build": "browserify scripts/video.js -o bundle.js",
+    "watch": "watchify scripts/video.js -o bundle.js",
+    "dev": "run-all \"npm run watch\" \"npm run dev-server\""
+  },
+  "devDependencies": {
+    "live-server": "^1.2.0",
+    "run-all": "^1.0.1",
+    "browserify": "^16.2.2",
+    "watchify": "^3.11.0"
   },
   "repository": {
     "type": "git",

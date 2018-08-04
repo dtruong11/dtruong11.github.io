@@ -1,9 +1,9 @@
 /* Add a black background color to the top navigation */
+
 .topnav {
     background-color: #507BFC;
     overflow: hidden;
 }
-
 
 /* Style the links inside the navigation bar */
 
@@ -19,7 +19,20 @@
 /* Style the search bar */
 
 .search-bar {
-	float: left;
+    float: left;
+}
+
+/* Change the color of links on hover */
+
+.topnav a:hover {
+    background-color: #507BFC;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+
+.topnav a:hover {
+    color: lightcyan;
 }
 
 /* Change the color of links on hover */
@@ -79,17 +92,16 @@ section article {
 
 /* Buttons */
 
-.buttons-acc, .buttons-decline {
-	width: 90%;
-	height: auto;
+.buttons-acc,
+.buttons-decline {
+    width: 90%;
+    height: auto;
 }
 
-
 .container.request {
-    border-radius:20px;
+    border-radius: 20px;
 }
 
 .events-text {
     size: 10px;
 }
-

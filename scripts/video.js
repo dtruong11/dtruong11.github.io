@@ -1,3 +1,6 @@
+const appId = require('./appID')
+console.log("I am the appId", appId)
+
 if (!AgoraRTC.checkSystemRequirements()) {
     alert("browser is no support webRTC");
 }
@@ -14,19 +17,16 @@ var audioSelect = document.querySelector('select#audioSource');
 var videoSelect = document.querySelector('select#videoSource');
 
 function join() {
+    // let channel = 'test'
 
-    let appId = '6942341968f245beb966b3f5db73e350'
-    let channel = 'test'
-
-    document.getElementById("join").disabled = true;
-    //document.getElementById("video").disabled = true;
+    // document.getElementById("join").disabled = true;
     var channel_key = null;
 
     console.log("Init AgoraRTC client with vendor key: " + appId.value);
     client = AgoraRTC.createClient({
         mode: 'interop'
     });
-    client.init('6942341968f245beb966b3f5db73e350', function () {
+    client.init(appId, function () {
         console.log("AgoraRTC client initialized");
         client.join(channel_key, 'test', null, function (uid) {
             console.log("User " + uid + " join channel successfully");
@@ -44,7 +44,6 @@ function join() {
             //localStream = AgoraRTC.createStream({streamID: uid, audio: false, cameraId: camera, microphoneId: microphone, video: false, screen: true, extensionId: 'minllpmhdgpndnkomcoccfekfegnlikg'});
             if (document.getElementById("video").checked) {
                 localStream.setVideoProfile('720p_3');
-
             }
 
             // The user has granted access to the camera and mic.
@@ -182,6 +181,32 @@ function getDevices() {
     });
 }
 
-//audioSelect.onchange = getDevices;
-//videoSelect.onchange = getDevices;
 getDevices();
+
+
+// DOM Manipulation 
+
+$(document).ready(join)
+// $('#join').click(function () {
+//     join()
+// })
+
+$('#leave').click(function () {
+    leave()
+})
+
+$('#muteAudio').click(function () {
+    muteAudio()
+})
+
+$('#unmuteAudio').click(function () {
+    unmuteAudio()
+})
+
+$('#enableVideo').click(function () {
+    enableVideo()
+})
+
+$('#disableVideo').click(function () {
+    disableVideo()
+})
