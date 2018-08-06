@@ -23,9 +23,6 @@ var audioSelect = document.querySelector('select#audioSource');
 var videoSelect = document.querySelector('select#videoSource');
 
 function join() {
-    // let channel = 'test'
-
-    // document.getElementById("join").disabled = true;
     var channel_key = null;
 
     console.log("Init AgoraRTC client with vendor key: " + appId.value);
@@ -133,7 +130,6 @@ function join() {
 }
 
 function leave() {
-    document.getElementById("leave").disabled = true;
     client.leave(function () {
         console.log("Leavel channel successfully");
     }, function (err) {
@@ -142,31 +138,21 @@ function leave() {
 }
 
 
-function muteAudio() {
-    document.getElementById("unmuteAudio").disabled = false;
-    document.getElementById("muteAudio").disabled = true;
-    //localStream.disableAudio();
-    localStream.disableAudio();
-}
+// function muteAudio() {
+//     localStream.disableAudio();
+// }
 
-function unmuteAudio() {
-    document.getElementById("unmuteAudio").disabled = true;
-    document.getElementById("muteAudio").disabled = false;
-    localStream.enableAudio();
-}
+// function unmuteAudio() {
+//     localStream.enableAudio();
+// }
 
-function enableVideo() {
-    document.getElementById("disableVideo").disabled = false;
-    document.getElementById("enableVideo").disabled = true;
-    localStream.enableVideo();
+// function enableVideo() {
+//     localStream.enableVideo();
+// }
 
-}
-
-function disableVideo() {
-    document.getElementById("disableVideo").disabled = true;
-    document.getElementById("enableVideo").disabled = false;
-    localStream.disableVideo();
-}
+// function disableVideo() {
+//     localStream.disableVideo();
+// }
 
 function getDevices() {
     AgoraRTC.getDevices(function (devices) {
@@ -193,27 +179,42 @@ getDevices();
 // DOM Manipulation 
 
 $(document).ready(join)
-// $('#join').click(function () {
-//     join()
-// })
 
-$('#leave').click(function () {
+// toggle audio
+document.getElementById('audio-toggle').addEventListener('click', function (event) {
+    const audio = document.getElementById('audio-toggle')
+    if (audio.getAttribute('src') === './assets/Icons/Audio.png') {
+        audio.setAttribute('src', './assets/Icons/dis-audio.png')
+        localStream.disableAudio();
+        console.log("Disabling audio successfully")
+    } else {
+        audio.setAttribute('src', './assets/Icons/Audio.png')
+        console.log("Enabling audio successfully")
+        localStream.enableAudio();
+    }
+})
+
+
+// toggle video 
+$('#video-toggle').click(function () {
+    const video = document.getElementById('video-toggle')
+    if (video.getAttribute('src') === './assets/Icons/Video.png') {
+        video.setAttribute('src', './assets/Icons/disabled-video.png')
+        localStream.disableVideo();
+        console.log("Disabling video successfully")
+    } else {
+        video.setAttribute('src', './assets/Icons/Video.png')
+        console.log("Enabling video successfully")
+        localStream.enableVideo();
+    }
+})
+
+// end call 
+$('#end-call').click(function () {
+    console.log('leaving the call')
     leave()
 })
 
-$('#muteAudio').click(function () {
-    muteAudio()
-})
-
-$('#unmuteAudio').click(function () {
-    unmuteAudio()
-})
-
-$('#enableVideo').click(function () {
-    enableVideo()
-})
-
-$('#disableVideo').click(function () {
-    disableVideo()
-})
+// Grab the big video, change margin. 
+$('[id^=`agora_remote`]').css('margin-left', '150px')
 },{"./appID":1}]},{},[2]);

@@ -4,3 +4,9 @@
     display: inline-block;
     float: right;
 }
+
+.audio,
+.video {
+    width: 49.99px;
+    height: 49.99px;
+}

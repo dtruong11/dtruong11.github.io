@@ -7,10 +7,11 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
         crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="./style/main.css">
     <link rel="stylesheet" href="./style/video.css">
 
-    <!-- Changed by MarinaF -->
     <script src="/scripts/AgoraRTCSDK-2.3.1.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
@@ -19,16 +20,19 @@
 <body>
     <!-- nav bar -->
     <div class="topnav">
-        <a class="float-left" href="./index.html">
-            <img src="./assets/doc-landing/logo.png" alt="logo">
-        </a>
-        <form class="search-bar">
-            <input class="form-control ml-5 mr-sm-2 mt-2" type="search" placeholder="Search" aria-label="Search">
-        </form>
-        <a class="active float-right mr-2" href="#events">Events</a>
-        <a class="float-right mr-2" href="#contact">Resource</a>
-        <a class="float-right mr-2" href="#about">About</a>
+        <div class='container'>
+            <a class="float-left" href="./index.html">
+                <img src="./assets/doc-landing/logo.png" alt="logo">
+            </a>
+            <a class="float-right mr-2" href="#">
+                <img class='mr-2' src="./assets/doc-landing/doctor-1.png" alt="doctor-avatar"> Richard Cohen
+            </a>
+            <a class="active float-right mr-3" href="#events">Events</a>
+            <a class="float-right mr-3" href="#contact">Resource</a>
+            <a class="float-right mr-3" href="#about">About</a>
+        </div>
     </div>
+
     <div id="div_device" class="panel panel-default" style="display:none">
         <div class="select">
             <label for="audioSource">Audio source: </label>
@@ -40,67 +44,15 @@
         </div>
     </div>
     <div id="div_join" class="panel panel-default">
-        <div class="panel-body">
-            <button id="leave" class="btn btn-primary">Leave</button>
-            <button id="muteAudio" class="btn btn-primary">Mute</button>
-            <button id="unmuteAudio" class="btn btn-primary">Unmute</button>
-            <button id="enableVideo" class="btn btn-primary">Enable Video</button>
-            <button id="disableVideo" class="btn btn-primary">Disable Video</button>
+        <div class="panel-body text-center mt-5 mb-5">
+            <img id='audio-toggle' class='audio' src="./assets/Icons/Audio.png" alt="audio-image">
+            <img id='video-toggle' class='video' src="./assets/Icons/Video.png" alt="video-button">
+            <img id='end-call' src="./assets/Icons/End Call.png" alt="end-call">
         </div>
     </div>
     <div id="video" style="margin:0 auto;">
-        <div id="agora_local" class='local-video'></div>
+        <div id="agora_local" class='local-video mr-5 mb-4'></div>
     </div>
-
-    <!-- Code from RTC London -->
-    <div id="wrapper">
-        <div class="room-name-title" id="room-name-meeting"></div>
-        <div class="main-container vid-container">
-            <div id="video-container-parent">
-                <div id="video-container" class="video-container">
-                    <div id="video-container-multiple"></div>
-                    <div class="toolbar">
-                        <ul>
-                            <li>
-                                <a class="switch-audio-button" href="#">
-                                    <img src="images/btn_voice@2x.png" alt="Voice">
-                                </a>
-                            </li>
-                            <li>
-                                <a class="mute-button" href="#">
-                                    <img src="images/btn_mute@2x.png" alt="Mute">
-                                </a>
-                            </li>
-                            <li style="display: none">
-                                <a class="fullscreen-button" style="display: none" href="#">
-                                    <img style="display: none" src="images/btn_maximize@2x.png" alt="Fullscreen">
-                                </a>
-                            </li>
-                            <li style="display: none">
-                                <a class="expension-button" style="display: none" href="#">
-                                    <img style="display: none" src="images/btn_expansion.png" alt="Switch">
-                                </a>
-                            </li>
-                            <li>
-                                <a class="end-call-button" href="#">
-                                    <img src="images/btn_endcall@2x.png" alt="End">
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="video-side-bar">
-                <div class="video-operation-bar">
-                    <span class="video-operation-btn list-switch-audio-btn"></span>
-                    <span class="video-operation-btn list-hang-up-btn"></span>
-                    <span class="video-operation-btn list-close-btn"></span>
-                </div>
-            </div>
-            <div class="info"></div>
-        </div>
-    </div>
-    <!-- The end of RTC London code -->
 
 
     <!-- Script reference -->
